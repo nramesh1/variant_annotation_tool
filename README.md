@@ -1,4 +1,4 @@
-# Annotation program
+# Variant Annotation program
 
 This annotation program was built using the following softwares/packages:
 
@@ -12,4 +12,19 @@ b. [tidyr](https://tidyr.tidyverse.org/)
 c. [stringr](https://stringr.tidyverse.org/)
 d. [ggplot2](https://ggplot2.tidyverse.org/)
 e. [patchwork](https://patchwork.data-imaginist.com/)
+
+## Usage
+The variant annotation R script is stored under the name: variant_annotation.R. 
+The script requires the annotation R script, path to the vcf file, name of the normal sample, name of the tumor sample and path to the annovar folder. 
+
+It can be run using the following syntax:
+```
+Rscript variant_annotation.R $PATH/vcf normal_sample_name tumor_sample_name $PATH/annovar
+```
+
+Example of the script usage:
+```
+Rscript variant_annotation.R coding_folder/Challenge_data.vcf normal vaf5 coding_folder/annovar
+```
+## Output files
 
