@@ -1,0 +1,13 @@
+ANNOVAR Version:
+	$Date: 2019-10-24 00:05:27 -0400 (Thu, 24 Oct 2019) $
+ANNOVAR Information:
+	For questions, comments, documentation, bug reports and program update, please visit http://www.openbioinformatics.org/annovar/
+ANNOVAR Command:
+	/volumes/lab/users/nramesh/Projects/github/SNV_pipeline/resources/annovar//annotate_variation.pl -geneanno -buildver hg19 ./annovar_output/Challenge_data.annovar /volumes/lab/users/nramesh/Projects/github/SNV_pipeline/resources/annovar//humandb/
+ANNOVAR Started:
+	Wed Jan 20 00:04:27 2021
+NOTICE: Output files are written to ./annovar_output/Challenge_data.annovar.variant_function, ./annovar_output/Challenge_data.annovar.exonic_variant_function
+NOTICE: Reading gene annotation from /volumes/lab/users/nramesh/Projects/github/SNV_pipeline/resources/annovar/humandb/hg19_refGene.txt ... Done with 72212 transcripts (including 17527 without coding sequence annotation) for 28250 unique genes
+NOTICE: Processing next batch with 6977 unique variants in 6977 input lines
+NOTICE: Reading FASTA sequences from /volumes/lab/users/nramesh/Projects/github/SNV_pipeline/resources/annovar/humandb/hg19_refGeneMrna.fa ... Done with 3956 sequences
+WARNING: A total of 446 sequences will be ignored due to lack of correct ORF annotation
