@@ -76,12 +76,35 @@ annovar_multianno = read.delim(file = paste0(annovar_output, file_name, '.hg19_m
 final_annotation_table = dplyr::left_join(x = vcf, y = annovar_multianno,
                                           by = c('CHROM' = 'Chr', 'POS' = 'Start',
                                                  'REF' = 'Ref', 'ALT' = 'Alt')) %>%
-  dplyr::rename(START = POS) %>%
-  dplyr::mutate(END = End,
-                Func.refGene = factor(Func.refGene, levels = levels(addNA(Func.refGene)), 
+  dplyr::rename(START = POS, 
+                END = End) %>%
+  dplyr::mutate(Func.refGene = factor(Func.refGene, levels = levels(addNA(Func.refGene)), 
                                       labels = c(levels(Func.refGene), 'unknown'), 
                                       exclude = NULL)) %>%
-  dplyr::relocate(END, .after = START)
+  dplyr::relocate(END, .after = START) %>%
+  dplyr::select(-SIFT_score, -SIFT_converted_rankscore, -SIFT_pred, -Polyphen2_HDIV_score,
+                -Polyphen2_HDIV_rankscore, -Polyphen2_HDIV_pred, -Polyphen2_HVAR_score,
+                -Polyphen2_HVAR_rankscore, -Polyphen2_HVAR_pred, -LRT_score,
+                -LRT_converted_rankscore, -LRT_pred, -MutationTaster_score,
+                -MutationTaster_converted_rankscore, -MutationTaster_pred, 
+                -MutationAssessor_score, -MutationAssessor_score_rankscore, 
+                -MutationAssessor_pred, -FATHMM_score, -FATHMM_converted_rankscore,
+                -FATHMM_pred, -PROVEAN_score, -PROVEAN_converted_rankscore, -PROVEAN_pred,
+                -VEST3_score, -VEST3_rankscore, -MetaSVM_score, -MetaSVM_rankscore,
+                -MetaSVM_pred, -MetaLR_score, -MetaLR_rankscore, -MetaLR_pred, -M.CAP_score, 
+                -M.CAP_rankscore, -M.CAP_pred, -CADD_raw, -CADD_raw_rankscore, 
+                -CADD_phred, -DANN_score, -DANN_rankscore, -fathmm.MKL_coding_score, 
+                -fathmm.MKL_coding_rankscore, -fathmm.MKL_coding_pred, 
+                -Eigen_coding_or_noncoding, -Eigen.raw, -Eigen.PC.raw, -GenoCanyon_score, 
+                -GenoCanyon_score_rankscore, -integrated_fitCons_score, 
+                -integrated_fitCons_score_rankscore, -integrated_confidence_value, 
+                -GERP.._RS, -GERP.._RS_rankscore, -phyloP100way_vertebrate, 
+                -phyloP100way_vertebrate_rankscore, -phyloP20way_mammalian, 
+                -phyloP20way_mammalian_rankscore, -phastCons100way_vertebrate, 
+                -phastCons100way_vertebrate_rankscore, -phastCons20way_mammalian, 
+                -phastCons20way_mammalian_rankscore, -SiPhy_29way_logOdds, 
+                -SiPhy_29way_logOdds_rankscore, -Interpro_domain, -GTEx_V6_gene, 
+                -GTEx_V6_tissue)
 
 ## output the vcf + annovar merged file
 readr::write_delim(x = final_annotation_table, path = paste0(file_path, '/', file_name, '_annotated.tsv'), quote_escape = 'double', delim = '\t')
