@@ -36,7 +36,6 @@ The tsv file utilizes all the variants from the input vcf and annotates using an
 
 The final tsv file contains the following information:
 
-| -------------------| ------------------------------------------------------------------ |
 | Column Name        | Description                                                        |
 | -------------------| ------------------------------------------------------------------ |
 | CHROM              | Chromosome Number                                                  |
@@ -68,5 +67,4 @@ The final tsv file contains the following information:
 | Other ExAC columns | Allele Frequency from Exac database for several population groups  |
 | avsnp150           | dbSNP150 annotation                                                |
 | cosmic70           | COSMIC gene annotation                                             |
-| -------------------| ------------------------------------------------------------------ |
 													
