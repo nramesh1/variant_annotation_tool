@@ -34,7 +34,7 @@ The variant annotation script outputs a tsv file (Eg: Challenge_data_annotated.t
 
 The tsv file utilizes all the variants from the input vcf and annotates using annovar. It can provide a large number of annotations but they have been removed using the code for the purposes of this task. Annotations such as SIFT and Polyphen2 scores could be remove from the select statement (lines 85 - 107 in the Rscript) and analyzed for functional impact of the amino acid changes. 
 
-The final tsv file contains the following information:
+The **final tsv** file contains the following information:
 
 | Column Name        | Description                                                        |
 | -------------------| ------------------------------------------------------------------ |
@@ -67,4 +67,7 @@ The final tsv file contains the following information:
 | Other ExAC columns | Allele Frequency from Exac database for several population groups  |
 | avsnp150           | dbSNP150 annotation                                                |
 | cosmic70           | COSMIC gene annotation                                             |
+
+The **final pdf** file contains examples of visualizing the distributions and trends of some of the variables listed in the above table.
+
 													
