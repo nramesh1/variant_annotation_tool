@@ -36,37 +36,37 @@ The tsv file utilizes all the variants from the input vcf and annotates using an
 
 The final tsv file contains the following information:
 
-| Column Name        | Description |
-| -------------------| ------------- |
-| CHROM              |   |
-| START              |   |
-| END                |   |
-| REF                |   |
-| ALT                |   |
-| TYPE               |   |
-| DP_normal          |   |
-| RO_normal          |   |
-| RO_vaf5            |   |
-| AO_normal          |   |
-| AO_vaf5            |   |
-| FREQ_RO_normal     |   |
-| FREQ_RO_vaf5       |   |
-| FREQ_AO_normal     |   |
-| FREQ_AO_vaf5       |   |
-| FREQ_AO_normal     |   |
-| PERC_RO_normal     |   |
-| PERC_RO_vaf5       |   |
-| PERC_AO_normal     |   |
-| PERC_AO_vaf5       |   |
-| Func.refGene	     |   |
-| Gene.refGene	     |   |
-| GeneDetail.refGene |   |
-| ExonicFunc.refGene |   |
-| AAChange.refGene   |   |
-| ExonicFunc.refGene |   |
-| ExAC_ALL           |   |
-| Other ExAC columns |   |
-| avsnp150           |   |
-| cosmic70           |   |
-
+| -------------------| ------------------------------------------------------------------ |
+| Column Name        | Description                                                        |
+| -------------------| ------------------------------------------------------------------ |
+| CHROM              | Chromosome Number                                                  |
+| START              | Start Position                                                     |
+| END                | End Position                                                       |
+| REF                | Reference Allele                                                   | 
+| ALT                | Alternate Allele(s)                                                |
+| TYPE               | Type of Variation                                                  |
+| DP_normal          | Total Depth of Normal Sample                                       |
+| DP_vaf5            | Total Depth of Tumor/Another Sample. vaf5 is the sample name       |
+| RO_normal          | Reference Allele Depth of Normal Sample                            |
+| RO_vaf5            | Reference Allele Depth of Tumor Sample                             |
+| AO_normal          | Alternate Allele Depth of Normal Sample                            |
+| AO_vaf5            | Alternate Allele Depth of Tumor/Another Sample                     |
+| FREQ_RO_normal     | Reference Allele Frequency of Normal Sample                        |
+| FREQ_RO_vaf5       | Reference Allele Frequency of Tumor/Another Sample                 |
+| FREQ_AO_normal     | Alternate Allele Frequency of Normal Sample                        |
+| FREQ_AO_vaf5       | Alternate Allele Frequency of Tumor/Another Sample                 |
+| PERC_RO_normal     | % Reads Supporting Reference Allele of Normal Sample               |
+| PERC_RO_vaf5       | % Reads Supporting Reference Allele of Tumor/Another Sample        |
+| PERC_AO_normal     | % Reads Supporting Alternate Allele of Normal Sample               |
+| PERC_AO_vaf5       | % Reads Supporting Alternate Allele of Tumor/Another Sample        |
+| Func.refGene	     | Region where the variant is                                        |
+| Gene.refGene	     | Gene name associated with the variant                              |
+| GeneDetail.refGene | Additional Details such as transcript ID, protein change etc       |
+| ExonicFunc.refGene | Exonic variant function                                            |
+| AAChange.refGene   | Amino acid change                                                  |
+| ExAC_ALL           | Allele Frequency from ExAC database                                |
+| Other ExAC columns | Allele Frequency from Exac database for several population groups  |
+| avsnp150           | dbSNP150 annotation                                                |
+| cosmic70           | COSMIC gene annotation                                             |
+| -------------------| ------------------------------------------------------------------ |
 													
